@@ -18,41 +18,62 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.videoTitle}>Razão e Proporção - Parte 1</Text>
       </View>
 
-      {/* Botões principais */}
-      <View style={styles.buttonGrid}>
-        <TouchableOpacity
-          style={[styles.menuButton, { backgroundColor: '#FF595E' }]}
-          onPress={() => navigation.navigate('Resumos')}
-        >
-          <Text style={styles.buttonText}>RESUMOS</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.menuButton, { backgroundColor: '#8AC926' }]}
-          onPress={() => navigation.navigate('Quiz')}
-        >
-          <Text style={styles.buttonText}>QUIZ</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.menuButton, { backgroundColor: '#FF595E' }]}
-          onPress={() => navigation.navigate('Questões')}
-        >
-          <Text style={styles.buttonText}>QUESTÕES</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.menuButton, { backgroundColor: '#8AC926' }]}
-          onPress={() => navigation.navigate('Aulas')}
-        >
-          <Text style={styles.buttonText}>AULAS</Text>
-        </TouchableOpacity>
-      </View>
+      {/* Botões hexagonais */}
+      <View style={styles.hexagonGrid}>
+        {/* Primeira linha com 2 hexágonos */}
+        <View style={styles.hexagonRow}>
+          <TouchableOpacity
+            style={styles.hexagonWrapper}
+            onPress={() => navigation.navigate('Resumos')}
+          >
+            <View style={styles.hexagon}>
+              <Text style={styles.hexagonText}>RESUMOS</Text>
+            </View>
+          </TouchableOpacity>
 
-      {/* Botão para estatísticas */}
-      <TouchableOpacity
-        style={styles.statsButton}
-        onPress={() => navigation.navigate('Estatísticas')}
-      >
-        <Text style={styles.statsText}>VEJA SUAS ESTATÍSTICAS</Text>
-      </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.hexagonWrapper}
+            onPress={() => navigation.navigate('Quiz')}
+          >
+            <View style={styles.hexagon}>
+              <Text style={styles.hexagonText}>QUIZ</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Segunda linha com 2 hexágonos */}
+        <View style={styles.hexagonRow}>
+          <TouchableOpacity
+            style={styles.hexagonWrapper}
+            onPress={() => navigation.navigate('Questões')}
+          >
+            <View style={styles.hexagon}>
+              <Text style={styles.hexagonText}>QUESTÕES</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.hexagonWrapper}
+            onPress={() => navigation.navigate('Aulas')}
+          >
+            <View style={styles.hexagon}>
+              <Text style={styles.hexagonText}>AULAS</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Terceira linha com 1 hexágono centralizado */}
+        <View style={styles.hexagonRow}>
+          <TouchableOpacity
+            style={styles.hexagonWrapper}
+            onPress={() => navigation.navigate('Estatísticas')}
+          >
+            <View style={styles.hexagon}>
+              <Text style={styles.hexagonText}>ESTATÍSTICAS</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 }
