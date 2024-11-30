@@ -3,7 +3,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import HomeScreen from "../screens/HomeScreen";
 import EstatisticasScreen from "../screens/EstatisticasScreen";
 import ExerciciosScreen from "../screens/ExerciciosScreen";
-import VideoScreen from "../screens/VideoScreen";
+import StackNavigator from "../navigation/StackNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -38,7 +38,7 @@ export default function TabNavigator() {
 			/>
 			<Tab.Screen
 				name="Video Aulas"
-				component={VideoScreen}
+				component={StackNavigator}
 				options={{
 					tabBarIcon: ({ color, size }) => <MaterialIcons name="tv" color={color} size={size} />,
 				}}

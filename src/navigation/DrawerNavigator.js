@@ -9,7 +9,7 @@ import {
 import * as Font from 'expo-font';
 import { Image, ActivityIndicator } from 'react-native';
 import TabNavigator from './TabNavigator';
-import ExerciciosScreen from '../screens/ExerciciosScreen';
+import ExerciciosScreen1 from '../screens/ExerciciosScreen1';
 import JogosScreen from '../screens/JogosScreen';
 import VideoScreen from '../screens/VideoScreen';
 import { useAuth } from '../api/AuthContext';
